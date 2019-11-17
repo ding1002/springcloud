@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: spring-cloud-config
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/ding1002/github-test.git
+          search-paths: respo
+          username: ding1002
+          password: ding1002github
+#不能修改端口，必须修改的话，增加bootstrap.properties 文件
+server:
+  port: 8888
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
